@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 1. Блок -->
+<!-- Верно. Семантически осмысленный блок `error` -->
+<div class="error"></div>
+
+<!-- Неверно. Описывается внешний вид -->
+<div class="red-text"></div>
+
+<!-- 2. Принцип работы с блоками -->
+<!-- Блок `header` -->
+<header class="header">
+    <!-- Вложенный блок `logo` -->
+    <div class="logo"></div>
+
+    <!-- Вложенный блок `search-form` -->
+    <form class="search-form"></form>
+</header>
+
+<!-- 3. Элемент -->
+<form class="search-form">
+    <!-- Элемент `input` блока `search-form` -->
+    <input class="search-form__input">
+
+    <!-- Элемент `button` блока `search-form` -->
+    <button class="search-form__button">Найти</button>
+</form>
+
+<!-- 4. Принцип работы с элементами: вложенность -->
+<!--
+    Верно. Структура полного имени элементов соответствует схеме:
+    `имя-блока__имя-элемента`
+-->
+<form class="search-form">
+    <div class="search-form__content">
+        <input class="search-form__input">
+        <button class="search-form__button">Найти</button>
+    </div>
+</form>
+
+<!--
+    Неверно. Структура полного имени элементов не соответствует схеме:
+    `имя-блока__имя-элемента`
+-->
+<form class="search-form">
+    <div class="search-form__content">
+        <!--
+            Рекомендуется:
+            `search-form__input` или `search-form__content-input`
+        -->
+        <input class="search-form__content__input">
+
+        <!--
+            Рекомендуется:
+            `search-form__button` или `search-form__content-button`
+        -->
+        <button class="search-form__content__button">Найти</button>
+    </div>
+</form>
+
+<!-- 5. Принцип работы с элементами: принадлежность -->
+<!-- Верно. Элементы лежат внутри блока `search-form` -->
+<!-- Блок `search-form` -->
+<form class="search-form">
+    <!-- Элемент `input` блока `search-form` -->
+    <input class="search-form__input">
+
+    <!-- Элемент `button` блока `search-form` -->
+    <button class="search-form__button">Найти</button>
+</form>
+
+<!-- Неверно. Элементы лежат вне контекста блока `search-form` -->
+<!-- Блок `search-form` -->
+<form class="search-form">
+</form>
+
+<!-- Элемент `input` блока `search-form` -->
+<input class="search-form__input">
+
+<!-- Элемент `button` блока `search-form` -->
+<button class="search-form__button">Найти</button>
+
+<!-- 6. Принцип работы с элементами: необязательность -->
+<!-- Блок `search-form` -->
+<div class="search-form">
+    <!-- Блок `input` -->
+    <input class="input">
+
+    <!-- Блок `button` -->
+    <button class="button">Найти</button>
+</div>
+
+<!-- 7. Модификатор -->
+<!-- Блок `search-form` имеет булевый модификатор `focused` -->
+<form class="search-form search-form_focused">
+    <input class="search-form__input">
+
+    <!-- Элемент `button` имеет булевый модификатор `disabled` -->
+    <button class="search-form__button search-form__button_disabled">Найти</button>
+</form>
+
+<!-- Блок `search-form` имеет модификатор `theme` со значением `islands` -->
+<form class="search-form search-form_theme_islands">
+    <input class="search-form__input">
+
+    <!-- Элемент `button` имеет модификатор `size` со значением `m` -->
+    <button class="search-form__button search-form__button_size_m">Найти</button>
+</form>
+
+<!--
+    Невозможно одновременно использовать два одинаковых модификатора
+    с разными значениями
+-->
+<form class="search-form
+             search-form_theme_islands
+             search-form_theme_lite">
+
+    <input class="search-form__input">
+
+    <button class="search-form__button
+                   search-form__button_size_s
+                   search-form__button_size_m">
+        Найти
+    </button>
+</form>
+
+<!-- 8. Принцип работы с модификаторами -->
+<!-- Верно. Блок `search-form` имеет модификатор `theme` со значением `islands`-->
+<form class="search-form search-form_theme_islands">
+    <input class="search-form__input">
+
+    <button class="search-form__button">Найти</button>
+</form>
+
+<!-- Неверно. Отсутствует модифицируемый класс `search-form` -->
+<form class="search-form_theme_islands">
+    <input class="search-form__input">
+
+    <button class="search-form__button">Найти</button>
+</form>
+</body>
+</html>
