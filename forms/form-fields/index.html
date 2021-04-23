@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form fields</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form class="form" action="" method="get">
+        <input class="form__item" type="text" name="first-name" placeholder="Имя" value="Arina">
+        <input class="form__item" type="text" name="last-name" placeholder="Фамилия">
+
+        <input class="form__item" type="password" name="password" placeholder="Пароль">
+        <input class="form__item" type="password" name="password-confirm" placeholder="Подтверждение пароля">
+
+        <div class="form__item">
+            <input id="genderFemale" type="radio" name="gender" value="female">
+            <label for="genderFemale">Женский</label>
+
+            <label>
+                <input type="radio" name="gender" value="male">
+                Мужской
+            </label>
+        </div>
+
+        <div class="form__item">
+            <input id="ageTeenager" type="checkbox" name="age" value="teenager">
+            <label for="ageTeenager">Больше 15</label>
+
+            <input id="ageYoung" type="checkbox" name="age" value="young" checked>
+            <label for="ageYoung">Больше 20</label>
+
+            <input id="ageGrown" type="checkbox" name="age" value="grown">
+            <label for="ageGrown">Больше 30</label>
+        </div>
+
+        <select class="form__item" name="country">
+            <option value="russia">Россия</option>
+            <option value="china">Китай</option>
+        </select>
+
+        <textarea class="form__item" name="about" placeholder="О себе"></textarea>
+
+        <div class="form__item">
+            <input type="submit" value="Отправить">
+            <button type="reset">Очистить</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
