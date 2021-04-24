@@ -9,7 +9,7 @@
 <div class="container">
     <form class="form" action="" method="get">
         <input class="form__item" type="text" name="first-name" placeholder="Имя" value="Arina">
-        <input class="form__item" type="text" name="last-name" placeholder="Фамилия">
+        <input class="form__item" type="text" name="last-name" placeholder="Фамилия" maxlength="5">
 
         <input class="form__item" type="password" name="password" placeholder="Пароль">
         <input class="form__item" type="password" name="password-confirm" placeholder="Подтверждение пароля">
@@ -25,13 +25,13 @@
         </div>
 
         <div class="form__item">
-            <input id="ageTeenager" type="checkbox" name="age" value="teenager">
+            <input id="ageTeenager" type="checkbox" name="age-teenager">
             <label for="ageTeenager">Больше 15</label>
 
-            <input id="ageYoung" type="checkbox" name="age" value="young" checked>
+            <input id="ageYoung" type="checkbox" name="age-young" checked>
             <label for="ageYoung">Больше 20</label>
 
-            <input id="ageGrown" type="checkbox" name="age" value="grown">
+            <input id="ageGrown" type="checkbox" name="age-grown">
             <label for="ageGrown">Больше 30</label>
         </div>
 
@@ -40,7 +40,7 @@
             <option value="china">Китай</option>
         </select>
 
-        <textarea class="form__item" name="about" placeholder="О себе"></textarea>
+        <textarea class="form__item" name="about" placeholder="О себе" rows="10" maxlength="5"></textarea>
 
         <div class="form__item">
             <input type="submit" value="Отправить">
