@@ -1,0 +1,61 @@
+.container {
+
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #003BD1;
+    position: relative;
+    left: 0;
+
+    animation-name: move;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+
+    /* Для повтора анимации: */
+    /*animation-iteration-count: 3;*/
+    /*animation-iteration-count: infinite;*/
+
+    /* Для изменения направления анимации: */
+    /*animation-direction: alternate;*/
+    /*animation-direction: alternate-reverse;*/
+    /*animation-direction: reverse;*/
+
+    /* Для запуска/приостановки анимации: */
+    /*animation-play-state: running;*/
+    /*animation-play-state: paused;*/
+
+    /* Определяет, какие стили должны применяться к элементу, когда анимация не проигрывается: */
+    /*animation-fill-mode: none;*/
+    /*animation-fill-mode: backwards;*/
+    /*animation-fill-mode: forwards;*/
+
+    animation: move 2s linear infinite alternate 0s forwards, change-color 5s ease infinite alternate 0s forwards;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        border-radius: 0;
+    }
+    100% {
+        left: 500px;
+    }
+}
+
+@keyframes change-color {
+    0% {
+        background: #003BD1;
+    }
+    50% {
+        background: #ca4eff;
+    }
+    100% {
+        background: #003BD1;
+    }
+}
