@@ -36,6 +36,10 @@
     animation: move 2s linear infinite alternate 0s forwards, change-color 5s ease infinite alternate 0s forwards;
 }
 
+.circle:hover {
+    animation-play-state: paused;
+}
+
 @keyframes move {
     0% {
         left: 0;
@@ -52,8 +56,14 @@
     0% {
         background: #003BD1;
     }
+    25% {
+        background: #4eff7a;
+    }
     50% {
         background: #ca4eff;
+    }
+    75% {
+        background: #ff2255;
     }
     100% {
         background: #003BD1;

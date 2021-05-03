@@ -1,0 +1,84 @@
+.container {
+
+}
+
+.link {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #ca4eff;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    transition-delay: 1s;
+}
+
+.link::after {
+    content: '→';
+    padding-left: 5px;
+    position: relative;
+    left: 0;
+    transition: left 0.2s ease;
+    /*transition: padding-left 0.2s ease;*/
+}
+
+.link + .link {
+    margin-left: 20px;
+}
+
+.link:hover {
+    color: #003BD1;
+}
+
+.link:hover::after {
+    left: 3px;
+    /*padding-left: 10px;*/
+}
+
+.button {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 21px 60px;
+    background-color: #003BD1;
+    color: #FFFFFF;
+    border-radius: 5.39553px;
+    transition: box-shadow 0.2s ease, background 5s ease, opacity 0.2s ease;
+    transition-delay: 2s;
+
+    /*transition-property: box-shadow, background;*/
+    /*transition-duration: 0.2s;*/
+    /*transition-timing-function: ease;*/
+}
+
+.button:hover {
+    background: #0040E6;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.button:active {
+    background: #0032B3;
+    box-shadow: inset 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #003BD1;
+    transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+    transition-delay: 3s;
+}
+
+.circle:hover {
+    background: #ca4eff;
+    transform: skewX(30deg);
+}
+
+.animation {
+    opacity: 0;
+}
+
+.loaded .animation {
+    opacity: 1;
+}
