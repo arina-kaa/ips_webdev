@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font: 600 90px/99px 'Open Sans', sans-serif;
+}
+
+h2 {
+    font: 500 31px/1.25 'Open Sans', sans-serif;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.top-block {
+    background: url("../img/university.jpg") no-repeat center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-block.university {
+    background-image: url("../img/university.jpg");
+}
+
+.top-block.programming {
+    background-image: url("../img/programming.jpg");
+}
+
+.top-block.conference {
+    background-image: url("../img/conference.jpg");
+}
+
+.header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 86px;
+}
+
+.navigation__link {
+    font: 600 16px/21.79px 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navigation__link + .navigation__link {
+    margin-left: 80px;
+}
+
+.top-block__content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+    max-width: 1680px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.top-block__title {
+    color: #FFFFFF;
+    max-width: 800px;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.test-js {
+    padding: 40px 20px;
+}
+
+.test-js__title {
+    margin-bottom: 24px;
+}
+
+.button {
+    font: 400 17px/1.6 'Open Sans', sans-serif;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 17px 30px 16px;
+    position: relative;
+    background: #fff;
+    color: #555;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid #555;
+}
+
+@media screen and (max-width: 1820px) {
+    .top-block__content {
+        padding: 0 86px;
+    }
+}
