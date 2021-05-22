@@ -90,3 +90,11 @@ function showFindNumberMessageFirstClick() {
     console.log('Want some numbers?');
     buttonFirstClick.removeEventListener('click', showFindNumberMessageFirstClick);
 }
+
+// Пример 11. Реакция на каждый клик
+const listItems = document.querySelectorAll('.js-list-item');
+console.log(listItems);
+listItems.forEach(item => item.addEventListener('click', (event) => {
+    console.log(event);
+    event.target.classList.add('active');
+}))
