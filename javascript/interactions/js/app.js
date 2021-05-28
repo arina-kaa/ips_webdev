@@ -1,6 +1,14 @@
+window.onload = () => {
+    initScrollTop();
+    initSmoothNavigation();
+    initPopup();
+}
+
 // Плавный скролл в начало страницы
-const button = document.querySelector('#buttonUp');
-button.addEventListener('click', scrollToStart);
+function initScrollTop() {
+    const button = document.querySelector('#buttonUp');
+    button.addEventListener('click', scrollToStart);
+}
 
 function scrollToStart(event) {
     event.preventDefault();
@@ -20,41 +28,44 @@ function scrollToStart(event) {
 // });
 
 // Плавная навигация
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-smoothLinks.forEach(smoothLink => {
-    smoothLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        const id = smoothLink.getAttribute('href');
+function initSmoothNavigation() {
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    smoothLinks.forEach(smoothLink => {
+        smoothLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            const id = smoothLink.getAttribute('href');
 
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         });
-    });
-})
+    })
+}
 
-// Открытие попапа
-const openPopupElements = document.querySelectorAll('.overlay, .popup');
-const popupLinks = document.querySelectorAll('a.js-open-popup');
-popupLinks.forEach(popupLink => {
-    popupLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        openPopupElements.forEach(element => {
-            element.classList.add('visible');
-        })
-    });
-})
+// Попап
+function initPopup() {
+    const openPopupElements = document.querySelectorAll('.overlay, .popup');
+    const popupLinks = document.querySelectorAll('a.js-open-popup');
+    popupLinks.forEach(popupLink => {
+        popupLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            openPopupElements.forEach(element => {
+                element.classList.add('visible');
+            })
+        });
+    })
 
-// Закрытие попапа
-const closePopupElements = document.querySelectorAll('.overlay, .close-button');
-closePopupElements.forEach(closePopupElement => {
-    closePopupElement.addEventListener('click', (event) => {
-        event.preventDefault();
-        openPopupElements.forEach(element => {
-            element.classList.remove('visible');
-        })
-    });
-})
+    const closePopupElements = document.querySelectorAll('.overlay, .close-button');
+    closePopupElements.forEach(closePopupElement => {
+        closePopupElement.addEventListener('click', (event) => {
+            event.preventDefault();
+            openPopupElements.forEach(element => {
+                element.classList.remove('visible');
+            })
+        });
+    })
+}
 
 // Асинхроннавя отправка формы
 document.addEventListener("submit", (e) => {
