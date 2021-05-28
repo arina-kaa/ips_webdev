@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font: 600 90px/99px 'Open Sans', sans-serif;
+}
+
+h2 {
+    font: 500 31px/1.25 'Open Sans', sans-serif;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.top-block {
+    background: url("../img/university.jpg") no-repeat center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-block.university {
+    background-image: url("../img/university.jpg");
+}
+
+.top-block.programming {
+    background-image: url("../img/programming.jpg");
+}
+
+.top-block.conference {
+    background-image: url("../img/conference.jpg");
+}
+
+.header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 86px;
+}
+
+.navigation__link {
+    font: 600 16px/21.79px 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navigation__link + .navigation__link {
+    margin-left: 80px;
+}
+
+.top-block__content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+    max-width: 1680px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.top-block__title {
+    color: #FFFFFF;
+    max-width: 800px;
+}
+
+.container {
+    max-width: 1024px;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.courses {
+    max-width: 1340px;
+    margin: 138px auto 69px;
+}
+
+.courses__title {
+    font: 600 normal 48px/100% 'Open Sans', sans-serif;
+    color: #000000;
+    padding-bottom: 53px;
+}
+
+.training {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+.training-item {
+    color: white;
+    height: 840px;
+}
+
+.training-item:nth-child(even) {
+    margin-top: -60px;
+}
+
+.training-item__title {
+    font: normal 500 25.3267px/30px 'Roboto', sans-serif;
+    padding: 30px 30px 11px;
+}
+
+.training-item__text {
+    padding-left: 30px;
+}
+
+.training-item.mobile {
+    background: url('../img/courses/mobile.jpg') center center no-repeat;
+}
+
+.training-item.web {
+    background: url('../img/courses/web.jpg') center center no-repeat;
+}
+
+.training-item.applied {
+    background: url('../img/courses/applied.jpg') center center no-repeat;
+}
+
+.training-item.copywriting {
+    background: url('../img/courses/copywriting.jpg') center center no-repeat;
+}
+
+.training-item.marketing {
+    background: url('../img/courses/marketing.jpg') center center no-repeat;
+}
+
+.training-item.sound {
+    background: url('../img/courses/sound.jpg') center center no-repeat;
+}
+
+.button-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    background: #ffffff;
+    border: 2px solid #bec0c2;
+    border-radius: 50%;
+}
+
+.arrow {
+    display: inline-block;
+    border: solid #bec0c2;
+    border-width: 0 2px 2px 0;
+    margin-top: 8px;
+    padding: 8px;
+    transform: rotate(-135deg);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 640px;
+    background: #ffffff;
+    box-shadow: 0 16px 48px rgba(60, 0, 61, 0.48);
+    border-radius: 12px;
+    padding: 0 80px 90px;
+}
+
+.fade {
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 19px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/cross-icon.svg") center no-repeat;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
