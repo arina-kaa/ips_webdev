@@ -8,6 +8,17 @@ window.onload = () => {
 function initScrollTop() {
     const button = document.querySelector('#buttonUp');
     button.addEventListener('click', scrollToStart);
+
+    // Плавное появление кнопки
+    window.addEventListener('scroll', (event) => {
+        const button = document.querySelector('#buttonUp');
+        const topOffset = 400;
+        if (window.pageYOffset > topOffset) {
+            button.classList.add('visible');
+        } else {
+            button.classList.remove('visible');
+        }
+    });
 }
 
 function scrollToStart(event) {
@@ -19,17 +30,10 @@ function scrollToStart(event) {
     })
 }
 
-// Плавное появление кнопки
-// window.addEventListener('scroll', (event) => {
-//     console.log(window.pageYOffset)
-//     if (window.pageYOffset > 400) {
-//         button.classList.add('visible');
-//     }
-// });
-
 // Плавная навигация
 function initSmoothNavigation() {
-    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    // const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    const smoothLinks = document.querySelectorAll('.js-menu-item');
     smoothLinks.forEach(smoothLink => {
         smoothLink.addEventListener('click', (event) => {
             event.preventDefault();

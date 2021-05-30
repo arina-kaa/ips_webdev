@@ -199,12 +199,3 @@ h2 {
     background: url("../img/cross-icon.svg") center no-repeat;
     cursor: pointer;
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
