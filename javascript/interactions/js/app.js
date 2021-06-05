@@ -70,24 +70,3 @@ function initPopup() {
         });
     })
 }
-
-// Асинхроннавя отправка формы
-document.addEventListener("submit", (e) => {
-    // Отменяем стандартное поведение отправки формы
-    e.preventDefault();
-
-    const form = e.target;
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-    })
-        .then((res) => {
-            // Обработка результата
-        })
-        .catch((err) => {
-            // Отображение ошибки
-        });
-
-    // Дизаблим все поля формы
-    Array.from(form.elements).forEach((field) => (field.disabled = true));
-});
