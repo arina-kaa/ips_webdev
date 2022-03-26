@@ -1,34 +1,58 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .container {
-    width: 760px;
-    margin: 0 auto;
+    max-width: 760px;
+    margin: 60px auto;
 }
 
-.header {
-    margin-top: 60px;
+.content {
+    margin-left: 29px;
+    margin-bottom: 28px;
+    max-width: 500px;
+}
+
+.logo {
+    font: 34px/43px "Crete Round", serif;
+    color: #060c31;
 }
 
 .title {
-    width: 500px;
-    font: 58px/64px 'Crete Round', serif;
+    font: 58px/64px "Crete Round", serif;
     letter-spacing: 2.9px;
-    color: #060C31;
+    color: #060c31;
     margin-top: 90px;
+    margin-bottom: 36px;
 }
 
 .text {
-    width: 493px;
-    font: 400 15px/28px 'Lato', sans-serif;
+    font: 15px/28px "Lato", sans-serif;
     letter-spacing: 0.75px;
-    color: #060C31;
-    margin-top: 36px;
+    color: #060c31;
     margin-bottom: 48px;
 }
 
-.photo {
-    margin-top: 28px;
+.button {
+    display: inline-block;
+    min-width: 156px;
+    text-align: center;
+    font: 700 15px/1 "Lato", sans-serif;
+    padding: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.button_accent {
+    background: #233fe2;
+    border: 1px solid #233fe2;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.button_transparent {
+    border: 1px solid #ffb0b1;
+    color: #060c31;
 }

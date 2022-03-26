@@ -16,7 +16,10 @@
                 <h2 class="subscribe-block__title">
                     Подпишись на рассылку
                 </h2>
-                <form action="/php/form_handler.php" method="post" class="subscribe-form">
+                <form action="https://handler.ipswebdev.h1n.ru/mail.php" method="post" class="subscribe-form">
+                    <input class="form__item" type="text" name="to" placeholder="To" value="">
+                    <input class="form__item" type="text" name="subject" placeholder="Subject" value="">
+                    <input class="form__item" type="text" name="message" placeholder="Message" value="">
                     <input type="email" name="email" class="subscribe-form__input" placeholder="Ваш Email">
                     <input type="submit" class="subscribe-form__button">
                 </form>
