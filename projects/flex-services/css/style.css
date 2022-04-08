@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 422px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-menu__name {
+    font: 24px/36px "Poppins", sans-serif;
+    color: #000000;
+    margin: 9px 0 36px;
+}
+
+.main-menu__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-menu__link {
+    font: 16px/29px "Montserrat", sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    margin-bottom: 14px;
+}
+
+.main-menu__link_active {
+    color: #000000;
+}
+
+.content {
+    margin-left: 422px;
+}
+
+.header {
+    background: #ccb78f;
+    padding: 60px 363px;
+}
+
+.header__navigation {
+    margin-bottom: 10px;
+}
+
+.header__link {
+    font: 13px/23px "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 13px;
+    text-decoration: none;
+    position: relative;
+}
+
+.header__link::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.header__link_active {
+    color: #000000;
+}
+
+.header__link_active::after {
+    bottom: -5px;
+}
+
+.header__title {
+    font: 700 40px/60px "Poppins", sans-serif;
+    color: #000000;
+}
+
+.main {
+    max-width: 1110px;
+    margin: 75px auto 94px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.main__content {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 11px;
+    padding: 24px 31px 44px 8px;
+}
+
+.main__content:nth-child(3n) {
+    margin-right: 0;
+}
+
+.main__icon {
+    width: 100px;
+    height: 100px;
+    background: #f5f5f5;
+    border-radius: 50px;
+    position: relative;
+}
+
+.main__icon::after {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    width: 55px;
+    height: 38px;
+    content: "";
+    background: url("../images/icon-pounds.svg");
+}
+
+.main__title {
+    font: 600 20px/30px "Poppins", sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 16px 0 20px;
+}
+
+.main__text {
+    font: 500 15px/27px "Montserrat", sans-serif;
+    color: #999999;
+}
